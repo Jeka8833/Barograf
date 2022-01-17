@@ -1,0 +1,28 @@
+//
+// Created by Jeka8833 on 04.01.2022.
+//
+
+#ifndef BAROGRAFV3_SETTING_H
+#define BAROGRAFV3_SETTING_H
+
+#define PIN_DISPLAY_CLOCK 13
+#define PIN_DISPLAY_DATA 11
+#define PIN_DISPLAY_CS 4
+#define PIN_DISPLAY_RESET 3
+
+#define PIN_BUTTON_MENU 5
+#define PIN_BUTTON_SELECT 8
+#define PIN_BUTTON_PLUS 6
+#define PIN_BUTTON_MINUS 7
+
+#define PIN_LED_PWM 9
+
+#define PIN_BUZZER 10
+
+#define PIN_DHT_SENSOR 2
+
+// Analog pins
+#define PIN_POTENTIOMETER 3
+#define PIN_LIGHT_SENSOR 2
+
+#endif //BAROGRAFV3_SETTING_H
