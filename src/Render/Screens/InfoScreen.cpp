@@ -34,8 +34,8 @@ void InfoScreen::render() {
     humidityText[19] += humidity / 10;
     humidityText[20] += humidity % 10;
 
-// (7600 * BMP::pressure) / 101325 => simplify => (303 * BMP::pressure) / 4053
-    const uint16_t pressure = (303 * BMP::pressure) / 4053;
+// (7600 * BMP::pressure) / 101325 => simplify => (304 * BMP::pressure) / 4053
+    const uint16_t pressure = (304 * BMP::pressure) / 4053;
     pressureText[17] += pressure / 1000;
     pressureText[18] += (pressure / 100) % 10;
     pressureText[19] += (pressure / 10) % 10;

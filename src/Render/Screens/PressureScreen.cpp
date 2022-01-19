@@ -37,7 +37,7 @@ void PressureScreen::render() {
     for (int i = 0; i <= 8; ++i) {
         const uint8_t posY = 5 + ((DISPLAY_HEIGHT - 5) * i) / 8;
         const uint16_t value =
-                (760 * (MIN_PRESSURE + minV + ((DISPLAY_HEIGHT - posY + 2) * range) / (DISPLAY_HEIGHT - 1))) / 101325;
+                (152 * (MIN_PRESSURE + minV + ((DISPLAY_HEIGHT - posY + 2) * range) / (DISPLAY_HEIGHT - 1))) / 20265;
 
         char str[4] = "000";
         str[0] += value / 100;
