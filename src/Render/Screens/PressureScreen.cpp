@@ -5,6 +5,7 @@
 #include "PressureScreen.h"
 #include "Render/Render.h"
 #include "sensors/BMP.h"
+#include "Render/MyFonts.h"
 
 #define WORK_AREA 114
 #define MIN_PRESSURE 68557
@@ -31,7 +32,7 @@ void PressureScreen::render() {
 
     const uint16_t range = maxV - minV;
 
-    Render::u8g2.setFont(u8g2_font_micro_mn);
+    Render::u8g2.setFont(MyFonts::micro_custom);
     Render::u8g2.setDrawColor(2);
 
     for (int i = 0; i <= 8; ++i) {

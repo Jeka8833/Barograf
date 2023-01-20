@@ -6,13 +6,14 @@
 #include "Render/Control.h"
 #include "Render/Render.h"
 #include "Config.h"
+#include "Render/MyFonts.h"
 
 #define WORK_AREA 114
 
 uint8_t LightScreen::editItem;
 
 void LightScreen::render() {
-    Render::u8g2.setFont(u8g2_font_micro_mn);
+    Render::u8g2.setFont(MyFonts::micro_custom);
     Render::u8g2.setDrawColor(1);
     Render::u8g2.drawVLine(WORK_AREA + 1, 0, DISPLAY_HEIGHT);
 

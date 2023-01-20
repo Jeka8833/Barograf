@@ -6,6 +6,7 @@
 #include "Render/Render.h"
 #include "Render/Control.h"
 #include "Config.h"
+#include "Render/MyFonts.h"
 
 #define ABOUT_ITEM 0
 #define LIGHT_ITEM 1
@@ -15,7 +16,7 @@
 uint8_t MenuScreen::editItem;
 
 void MenuScreen::render() {
-    Render::u8g2.setFont(u8g2_font_9x15_t_cyrillic);
+    Render::u8g2.setFont(u8g2_font_8x13_t_cyrillic );
     Render::u8g2.setDrawColor(2);
 
     Render::u8g2.drawUTF8((DISPLAY_WIDTH - Render::u8g2.getUTF8Width("Меню")) >> 1, 10, "Меню");

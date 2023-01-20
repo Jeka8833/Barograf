@@ -6,6 +6,7 @@
 #include "Render/Render.h"
 #include "Render/Control.h"
 #include "sensors/DSO.h"
+#include "Render/MyFonts.h"
 
 #define EDIT_HOUR 4
 #define EDIT_MINUTE 5
@@ -17,7 +18,7 @@
 uint8_t TimeScreen::editItem;
 
 void TimeScreen::render() {
-    Render::u8g2.setFont(u8g2_font_9x15_t_cyrillic);
+    Render::u8g2.setFont(u8g2_font_8x13_t_cyrillic);
 
     if (!(editItem == EDIT_WDAY && Render::secondAnimation)) {
         switch (DSO::wDay) {
@@ -86,7 +87,7 @@ void TimeScreen::render() {
         timeText[3] = '-';
         timeText[4] = '-';
     }
-    Render::u8g2.setFont(u8g2_font_osb21_tn);
+    Render::u8g2.setFont(MyFonts::osb_custom);
     Render::u8g2.drawStr((DISPLAY_WIDTH - Render::u8g2.getStrWidth(timeText)) >> 1, 43, timeText);
 }
 

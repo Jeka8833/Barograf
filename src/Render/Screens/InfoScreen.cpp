@@ -34,14 +34,13 @@ void InfoScreen::render() {
     humidityText[19] += humidity / 10;
     humidityText[20] += humidity % 10;
 
-// (7600 * BMP::pressure) / 101325 => simplify => (304 * BMP::pressure) / 4053
     const uint16_t pressure = (304 * BMP::pressure) / 4053;
     pressureText[17] += pressure / 1000;
     pressureText[18] += (pressure / 100) % 10;
     pressureText[19] += (pressure / 10) % 10;
     pressureText[21] += pressure % 10;
 
-    Render::u8g2.setFont(u8g2_font_9x15_t_cyrillic);
+    Render::u8g2.setFont(u8g2_font_8x13_t_cyrillic);
     Render::u8g2.drawUTF8(0, 11, temperatureText);
     Render::u8g2.drawUTF8(0, 24, heatIndexText);
     Render::u8g2.drawUTF8(0, 37, humidityText);

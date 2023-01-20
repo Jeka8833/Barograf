@@ -32,7 +32,7 @@ void loop() {
     Render::setBrightness(LightScreen::getScreenBrightness());
 
     unsigned long currentMillis = millis();
-    if ((unsigned long)(currentMillis - previousMillis) >= 2000) {
+    if ((unsigned long) (currentMillis - previousMillis) >= 2000) {
         previousMillis = currentMillis;
 
         Render::needUpdate = true;
