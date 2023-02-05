@@ -24,6 +24,9 @@ U8G2_ST7920_128X64_1_HW_SPI Render::u8g2(U8G2_R0, /*IN_DISPLAY_CLOCK, PIN_DISPLA
 
 void Render::init() {
     pinMode(PIN_LED_PWM, OUTPUT);
+    // Пины D9 и D10 - 7.8 кГц
+    TCCR1A = 0b00000001;  // 8bit
+    TCCR1B = 0b00001010;  // x8 fast pwm
 
     // u8g2.setBusClock(1000000);
     u8g2.begin();
